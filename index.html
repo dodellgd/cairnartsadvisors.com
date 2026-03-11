@@ -317,10 +317,18 @@
   @keyframes fadeUp { from { opacity:0; transform:translateY(16px); } to { opacity:1; transform:translateY(0); } }
   @keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
 
+  .nav-logo-link { display:flex; align-items:center; gap:14px; text-decoration:none; flex:0 0 auto; }
+  .nav-stones-wrap { display:flex; flex-direction:column; align-items:center; gap:2px; flex-shrink:0; }
+  .nav-text-wrap { display:flex; flex-direction:column; gap:5px; flex-shrink:0; }
+  .nav-wm-name { font-family:'Jost',sans-serif; font-size:15px; font-weight:500; letter-spacing:0.38em; text-transform:uppercase; color:#f5f0e6; line-height:1; display:block; }
+  .nav-wm-tag { font-family:'Jost',sans-serif; font-size:8px; font-weight:300; letter-spacing:0.38em; text-transform:uppercase; color:#d4a84a; line-height:1; display:block; }
+
   @media (max-width: 860px) {
     body > nav { padding: 0 16px; }
     body > nav .nav-links { gap: 14px; }
     body > nav .nav-links a { font-size: 9px; letter-spacing: 0.18em; }
+    .nav-wm-name { font-size: 11px; letter-spacing: 0.22em; }
+    .nav-wm-tag { display: none; }
     .section-inner { padding: 70px 22px; }
     #home { padding: 100px 22px 60px; }
     .hero-panel, .hero-mark { display: none; }
@@ -335,17 +343,17 @@
 
 <!-- NAV -->
 <nav>
-  <a href="#home" style="display:flex;align-items:center;gap:14px;text-decoration:none;flex:0 0 auto;">
-    <div style="display:flex;flex-direction:column;align-items:center;gap:2px;flex-shrink:0;">
+  <a href="#home" class="nav-logo-link">
+    <div class="nav-stones-wrap">
       <div style="width:5px;height:3px;background:#d4a84a;border-radius:50%;opacity:0.4;"></div>
       <div style="width:8px;height:4px;background:#d4a84a;border-radius:50%;opacity:0.55;"></div>
       <div style="width:11px;height:5px;background:#d4a84a;border-radius:50%;opacity:0.70;"></div>
       <div style="width:14px;height:6px;background:#d4a84a;border-radius:50%;opacity:0.85;"></div>
       <div style="width:17px;height:7px;background:#d4a84a;border-radius:50%;opacity:1.0;"></div>
     </div>
-    <div style="display:flex;flex-direction:column;gap:5px;flex-shrink:0;">
-      <span style="font-family:'Jost',sans-serif;font-size:15px;font-weight:500;letter-spacing:0.38em;text-transform:uppercase;color:#f5f0e6;line-height:1;display:block;">Cairn Arts Advisors</span>
-      <span style="font-family:'Jost',sans-serif;font-size:8px;font-weight:300;letter-spacing:0.38em;text-transform:uppercase;color:#d4a84a;line-height:1;display:block;">Senior Arts Leadership</span>
+    <div class="nav-text-wrap">
+      <span class="nav-wm-name">Cairn Arts Advisors</span>
+      <span class="nav-wm-tag">Senior Arts Leadership</span>
     </div>
   </a>
   <ul class="nav-links" style="margin-top:12px;">
