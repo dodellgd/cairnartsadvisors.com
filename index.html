@@ -177,15 +177,43 @@
     position: absolute; right: 7%; top: 50%;
     transform: translateY(-50%);
     z-index: 3; display: flex; flex-direction: column;
-    align-items: center; gap: 7px;
+    align-items: center; gap: 20px;
     opacity: 0; animation: fadeIn 1s ease forwards 0.9s;
   }
+
+  /* Cairn stone stack */
+  .hero-cairn {
+    display: flex; flex-direction: column;
+    align-items: center; gap: 7px;
+  }
   .hst { background: var(--amber); border-radius: 50%; }
-  .hs1 { width: 22px;  height: 14px; opacity: 0.4; }
-  .hs2 { width: 36px;  height: 20px; opacity: 0.55; }
-  .hs3 { width: 50px;  height: 24px; opacity: 0.70; }
-  .hs4 { width: 64px;  height: 27px; opacity: 0.85; }
-  .hs5 { width: 80px;  height: 31px; opacity: 1.00; }
+  .hs1 { width: 30px;  height: 18px; opacity: 0.4; }
+  .hs2 { width: 48px;  height: 26px; opacity: 0.55; }
+  .hs3 { width: 66px;  height: 32px; opacity: 0.70; }
+  .hs4 { width: 84px;  height: 36px; opacity: 0.85; }
+  .hs5 { width: 104px; height: 41px; opacity: 1.00; }
+
+  /* Wordmark beneath cairn */
+  .hero-wordmark {
+    display: flex; flex-direction: column;
+    align-items: center; gap: 8px;
+  }
+  .hero-wm-name {
+    font-family: 'Jost', sans-serif;
+    font-size: 19px; font-weight: 500;
+    letter-spacing: 0.42em; text-transform: uppercase;
+    color: var(--forest); line-height: 1;
+  }
+  .hero-wm-rule {
+    width: 104px; height: 1px;
+    background: var(--amber); opacity: 0.6;
+  }
+  .hero-wm-tag {
+    font-family: 'Jost', sans-serif;
+    font-size: 9px; font-weight: 300;
+    letter-spacing: 0.38em; text-transform: uppercase;
+    color: var(--amber); line-height: 1;
+  }
 
   /* ═══ SHARED SECTION STYLES ═══ */
   .section-inner { max-width: 1100px; margin: 0 auto; padding: 100px 60px; }
@@ -307,17 +335,17 @@
 
 <!-- NAV -->
 <nav>
-  <a href="#home" style="display:flex;align-items:center;gap:12px;text-decoration:none;flex:0 0 auto;">
+  <a href="#home" style="display:flex;align-items:center;gap:14px;text-decoration:none;flex:0 0 auto;">
     <div style="display:flex;flex-direction:column;align-items:center;gap:2px;flex-shrink:0;">
-      <div style="width:5px;height:3px;background:#d4a84a;border-radius:50%;"></div>
-      <div style="width:8px;height:4px;background:#d4a84a;border-radius:50%;"></div>
-      <div style="width:11px;height:5px;background:#d4a84a;border-radius:50%;"></div>
-      <div style="width:14px;height:6px;background:#d4a84a;border-radius:50%;"></div>
-      <div style="width:17px;height:7px;background:#d4a84a;border-radius:50%;"></div>
+      <div style="width:5px;height:3px;background:#d4a84a;border-radius:50%;opacity:0.4;"></div>
+      <div style="width:8px;height:4px;background:#d4a84a;border-radius:50%;opacity:0.55;"></div>
+      <div style="width:11px;height:5px;background:#d4a84a;border-radius:50%;opacity:0.70;"></div>
+      <div style="width:14px;height:6px;background:#d4a84a;border-radius:50%;opacity:0.85;"></div>
+      <div style="width:17px;height:7px;background:#d4a84a;border-radius:50%;opacity:1.0;"></div>
     </div>
-    <div style="display:flex;flex-direction:column;gap:4px;flex-shrink:0;">
-      <span style="font-family:'Jost',sans-serif;font-size:17px;font-weight:500;letter-spacing:0.3em;text-transform:uppercase;color:#f5f0e6;line-height:1;display:block;">CAIRN</span>
-      <span style="font-family:'Jost',sans-serif;font-size:8px;font-weight:300;letter-spacing:0.18em;text-transform:uppercase;color:#d4a84a;line-height:1;display:block;">Arts Advisors</span>
+    <div style="display:flex;flex-direction:column;gap:5px;flex-shrink:0;">
+      <span style="font-family:'Jost',sans-serif;font-size:15px;font-weight:500;letter-spacing:0.38em;text-transform:uppercase;color:#f5f0e6;line-height:1;display:block;">Cairn Arts Advisors</span>
+      <span style="font-family:'Jost',sans-serif;font-size:8px;font-weight:300;letter-spacing:0.38em;text-transform:uppercase;color:#d4a84a;line-height:1;display:block;">Senior Arts Leadership</span>
     </div>
   </a>
   <ul class="nav-links" style="margin-top:12px;">
@@ -339,11 +367,18 @@
     <a href="#services" class="hero-btn">Explore our work &nbsp;→</a>
   </div>
   <div class="hero-mark">
-    <div class="hst hs1"></div>
-    <div class="hst hs2"></div>
-    <div class="hst hs3"></div>
-    <div class="hst hs4"></div>
-    <div class="hst hs5"></div>
+    <div class="hero-cairn">
+      <div class="hst hs1"></div>
+      <div class="hst hs2"></div>
+      <div class="hst hs3"></div>
+      <div class="hst hs4"></div>
+      <div class="hst hs5"></div>
+    </div>
+    <div class="hero-wordmark">
+      <span class="hero-wm-name">Cairn Arts Advisors</span>
+      <div class="hero-wm-rule"></div>
+      <span class="hero-wm-tag">Senior Arts Leadership</span>
+    </div>
   </div>
 </section>
 
@@ -460,7 +495,7 @@
         <p class="contact-intro">Cairn Arts Advisors works with a select number of organizations each year — prioritizing depth of engagement over volume of clients. If you're navigating a transition, building something new, or simply need a steady hand, we'd welcome the conversation.</p>
         <div class="deets">
           <div class="deet"><span class="deet-label">Principal</span><span class="deet-val">David O'Dell</span></div>
-          <div class="deet"><span class="deet-label">Email</span><span class="deet-val"><a href="mailto:david.odell@cairnartsadvisors.com">david.odell@cairnartsadvisors.com</a></span></div>
+          <div class="deet"><span class="deet-label">Email</span><span class="deet-val"><a href="/cdn-cgi/l/email-protection#7b1f1a0d121f55141f1e17173b181a1209151a090f081a1f0d120814090855181416"><span class="__cf_email__" data-cfemail="046065726d602a6b606168684467656d766a657670776560726d776b76772a676b69">[email&#160;protected]</span></a></span></div>
           <div class="deet"><span class="deet-label">Phone</span><span class="deet-val"><a href="tel:6087701783">608.770.1783</a></span></div>
           <div class="deet"><span class="deet-label">Address</span><span class="deet-val">386 East Street &nbsp;·&nbsp; Pittsboro, NC 27312</span></div>
           <div class="deet"><span class="deet-label">LinkedIn</span><span class="deet-val"><a href="https://linkedin.com/in/davidodell" target="_blank">linkedin.com/in/davidodell</a></span></div>
@@ -477,8 +512,4 @@
   </div>
 </section>
 
-<!-- FOOTER -->
-<footer>
-  <div class="foot-copy">© 2026 Cairn Arts Advisors &nbsp;·&nbsp; Pittsboro, North Carolina</div>
-  <nav class="foot-nav">
-    <a href="#about
+<!-- FO
